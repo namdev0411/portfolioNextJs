@@ -1,0 +1,9 @@
+.container{
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-color: #5f27cd;
+}
+.container h3{
+    margin: 0 0px;
+    font-size: 2rem;
+}

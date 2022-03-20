@@ -1,0 +1,15 @@
+.workContent{
+    min-height: 80px;
+}   
+.workContentTitle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 1.7rem;
+    margin: 3px;
+}
+.workContentBody{
+    font-size: 1rem;
+    margin: 3px;
+    padding-left: 8px;
+    font-weight: 400;
+}
