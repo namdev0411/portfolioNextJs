@@ -8,12 +8,13 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from '@material-ui/lab'
-import styles from '../styles/Nav.module.css'
+import Element from 'react-scroll/modules/components/Element'
 import SectionHeader from './SectionHeader'
 
 export default function EducationAndExperience() {
   return (
     <div>
+      <Element name="edu_exp" />
       <SectionHeader title="教育&経験" />
       <Timeline align="alternate">
         <TimelineItem>
