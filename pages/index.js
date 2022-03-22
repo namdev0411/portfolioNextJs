@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import EducationAndExperience from '../components/EducationAndExperience'
+import Project from '../components/Project'
 import Top from '../components/Top'
 import Work from '../components/Work'
 import styles from '../styles/Home.module.css'
@@ -14,7 +16,8 @@ export default function Home() {
       </Head>
       <Top/>
       <Work/>
-      <Work/>
+      <EducationAndExperience/>
+      <Project/>
     </div>
   )
 }
