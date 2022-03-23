@@ -2,6 +2,7 @@ import styles from '../styles/Project.module.css'
 import Image from 'next/image'
 import SectionHeader from './SectionHeader'
 import { Grid } from '@material-ui/core'
+import Element from 'react-scroll/modules/components/Element'
 
 const projectlist = [
   { title: 'Shop Pet', image: '/petshop.png', url: 'https://petshop-65533.web.app/home' },
@@ -12,6 +13,7 @@ const projectlist = [
 export default function Project() {
   return (
     <div>
+      <Element name="project" />
       <SectionHeader title="プロジェクト" />
       <div style={{marginTop: 30}}>
         <Grid container spacing={3}>

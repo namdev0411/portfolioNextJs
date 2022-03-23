@@ -12,38 +12,44 @@ const navlist = [
     name: '教育'
   },
   {
-    to: 'work',
-    name: 'スキル'
-  },
-  {
-    to: 'work',
+    to: 'project',
     name: 'プロジェクト'
   },{
-    to: 'work',
-    name: '趣味'
+    to: 'certifieds',
+    name: '資格'
   }
 ]
-
-export default function Nav() {
+export default function Nav({offset}) {
   const [data, setData] = useState([]);
-  const [oldFocus, setOldFocus] = useState(null);
   useEffect(() => {
     const dataResult = [];
-    navlist.forEach(item =>{
-      dataResult.push({...item,focus: false});
+    navlist.forEach((item,index) =>{
+      if(index == 0){
+        dataResult.push({...item,focus: true});
+      }else{
+        dataResult.push({...item,focus: false});
+      }
     })
     setData(dataResult);
   }, []);
 
   const handleClick = (index)=>{
     let newData = data;
-    if(oldFocus != null){
-      newData[oldFocus].focus = false;
-    }
-    setOldFocus(index);
+    newData.forEach(item=>{
+      item.focus = false;
+    });
     newData[index].focus = true;
-    console.log( newData);
     setData(newData);
+  }
+  const getClass = (item)=>{
+    let result = styles.listItem;
+    if(offset){
+     result+= (' ' + styles.offset)
+    }
+    if(item.focus){
+      result+= (' ' + styles.focus)
+    }
+    return result;
   }
   return (
     <ul className={styles.container}>
@@ -56,7 +62,7 @@ export default function Nav() {
             smooth={true}
             offset={50}
             duration={500}
-            className={item.focus ? styles.listItem + ' '+styles.focus : styles.listItem}
+            className={getClass(item)}
             onClick={()=>handleClick(index)}
           >
           {item.name}

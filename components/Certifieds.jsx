@@ -3,11 +3,11 @@ import { Element } from 'react-scroll/modules'
 import styles from '../styles/Work.module.css'
 import SectionHeader from './SectionHeader'
 
-export default function Work() {
+export default function Certifieds() {
   return (
     <div className={styles.container}>
-      <Element name="work" />
-      <SectionHeader title="仕事" />
+      <Element name="certifieds" />
+      <SectionHeader title="資格" />
       <Grid container>
         <Grid item xs={6}>
           <div style={{ margin: 35, marginTop: 0 }}>
