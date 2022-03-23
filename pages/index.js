@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Certifieds from '../components/Certifieds'
 import EducationAndExperience from '../components/EducationAndExperience'
+import Footer from '../components/Footer'
 import Project from '../components/Project'
 import Top from '../components/Top'
 import Work from '../components/Work'
@@ -21,6 +22,7 @@ export default function Home() {
         <EducationAndExperience/>
         <Project/>
         <Certifieds/>
+        <Footer/>
       </div>
     </div>
   )
