@@ -1,8 +1,14 @@
 .container{
-    border-bottom: 1px;
-    border-bottom-style: solid;
-    border-color: #5f27cd;
+    position: fixed;
+    width: 100%;
+    height: 130px;
+    transition: all .25s ease-in-out;
+    
+    display: flex;
+    align-items: center;
+    z-index: 2;
 }
 .scrollStyle{
+    height: 100px;
     background-color: RGBA(126,87,194,.9);
 }
