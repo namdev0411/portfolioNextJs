@@ -22,8 +22,8 @@ export default function Home() {
         <EducationAndExperience/>
         <Project/>
         <Certifieds/>
-        <Footer/>
       </div>
+      <Footer/>
     </div>
   )
 }
